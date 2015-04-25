@@ -1,6 +1,6 @@
-# Aquel::Sequel
+# aquel-sequel [![Build Status](https://travis-ci.org/youpy/aquel-sequel.svg)](https://travis-ci.org/youpy/aquel-sequel)
 
-TODO: Write a gem description
+A Sequel adapter for aquel
 
 ## Installation
 
