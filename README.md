@@ -20,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+aquel = Aquel.define 'tsv' do
+  has_header
+
+  document do |attributes|
+    open(attributes['path'])
+  end
+
+  item do |document|
+    document.gets
+  end
+
+  split do |item|
+    item.chomp.split(/\t/)
+  end
+end
+
+DB = Sequel.connect('aquel:///', :database => aquel)
+```
+
+```ruby
+items = DB.select(:col1, :col3).from('tsv').where(path: tsv_path).exclude(col1: 'foo1').all
+```
 
 ## Contributing
 
