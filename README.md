@@ -21,6 +21,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'aquel/sequel'
+
 aquel = Aquel.define 'tsv' do
   has_header
 
